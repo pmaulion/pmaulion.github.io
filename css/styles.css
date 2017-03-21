@@ -1,0 +1,43 @@
+body {
+    width: auto;
+    height: 675px;
+    background-color: black;
+}
+
+/*------------------------------------------Start Page----------------------------------------------------------------*/
+
+.game-title {
+    background-image: url(../images/Destination.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    bottom: 850px;
+    height: 339px;
+    width: 1192px;
+    margin: 0 auto;
+    opacity: .75;
+}
+
+#start-button {
+    background-color: #FFFFFF;
+    font-family: Tahoma;
+    position: absolute;
+    height: 100px;
+    width: 400px;
+    font-size: 40px;
+    border-radius: 10px;
+    top: 690px;
+    left: 350px;
+    letter-spacing: 2px;
+}
+
+.credits {
+    font-family: Tahoma;
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    margin: 0px;
+    top: 820px;
+    left: 430px;
+}
+

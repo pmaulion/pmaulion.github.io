@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Destination Quiz!</title>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" type="text/css" href="css/quizstyles.css">
+        <link rel="stylesheet" type="text/css" href="css/quizanimations.css">
+    </head>
+    <body>
+    <!-- Cloud Decor -->
+        <img class="cloud-L1 floating" src="images/cloudy.png">
+        <img class="cloud-R1 floating" src="images/cloudy.png">
+        <img class="cloud-L2 floating" src="images/cloudy.png">
+        <img class="cloud-R2 floating" src="images/cloudy.png">
+        <img class="cloud-L3 floating" src="images/cloudy.png">
+        <img class="cloud-R3 floating" src="images/cloudy.png">
+
+    <!-- Answer 1 -->
+        <div class="answer-box1">
+            <div class="goToLocation" id="goToLocation1"><span id="transition-text1">Traveling To...</span></div>
+            <div class="map-container">
+                <div id="map1"></div>    
+            </div>
+            <div class="table-description">
+                    <table class="answer-table">
+                        <tr>
+                            <td id="label-1">Category</td>
+                            <td id="label-2">Value</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Country:</td>
+                            <td class="output-table, white" id="country-output">Belgium</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, stripe">Population:</td>
+                            <td class="output-table, stripe" id="population-output">1,175,173</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Density:</td>
+                            <td class="output-table, white" id="density-output">16,857/sq mi</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, stripe">Area:</td>
+                            <td class="output-table, stripe" id="area-output">62.2 sq mi</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Currency:</td>
+                            <td class="output-table, white" id="currency-output">Euro (EUR)</td>
+                        </tr>
+                    </table>
+            </div>
+            <div class="answer-pic1"></div>
+            <div class="hatch" id="answer-verdict1"></div>
+            <div class="next1"><button>Next!</button></div>
+        </div>
+    
+    <!-- Answer 2 -->
+
+        <div class="answer-box2">
+            <div class="goToLocation" id="goToLocation2"><span id="transition-text2">Traveling To...</span></div>
+            <div class="map-container">
+                <div id="map2"></div>    
+            </div>
+            <div class="table-description">
+                    <table class="answer-table">
+                        <tr>
+                            <td id="label-1">Category</td>
+                            <td id="label-2">Value</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Country:</td>
+                            <td class="output-table, white" id="country-output">Singapore</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, stripe">Population:</td>
+                            <td class="output-table, stripe" id="population-output">5,610,000</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Density:</td>
+                            <td class="output-table, white" id="density-output">20,194/sq mi</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, stripe">Area:</td>
+                            <td class="output-table, stripe" id="area-output">277.6 sq mi</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Currency:</td>
+                            <td class="output-table, white" id="currency-output">Singapore Dollar (SGD)</td>
+                        </tr>
+                    </table>
+            </div>
+            <div class="answer-pic2"></div>
+            <div class="hatch" id="answer-verdict2"></div>
+            <div class="next2"><button>Next!</button></div>
+        </div>
+
+    <!-- Answer 3 -->
+
+        <div class="answer-box3">
+            <div class="goToLocation" id="goToLocation3"><span id="transition-text3">Traveling To...</span></div>
+            <div class="map-container">
+                <div id="map3"></div>    
+            </div>
+            <div class="table-description">
+                    <table class="answer-table">
+                        <tr>
+                            <td id="label-1">Category</td>
+                            <td id="label-2">Value</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Country:</td>
+                            <td class="output-table, white" id="country-output">United Arab Emirates (UAE)</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, stripe">Population:</td>
+                            <td class="output-table, stripe" id="population-output">2,735,925</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Density:</td>
+                            <td class="output-table, white" id="density-output">443/sq mi</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, stripe">Area:</td>
+                            <td class="output-table, stripe" id="area-output">1,588 sq mi</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Currency:</td>
+                            <td class="output-table, white" id="currency-output">UAE Dirham</td>
+                        </tr>
+                    </table>
+            </div>
+            <div class="answer-pic3"></div>
+            <div class="hatch" id="answer-verdict3"></div>
+            <div class="next3"><button>Next!</button></div>
+        </div>
+
+    <!-- Answer 4 -->
+
+        <div class="answer-box4">
+            <div class="goToLocation" id="goToLocation4"><span id="transition-text4">Traveling To...</span></div>
+            <div class="map-container">
+                <div id="map4"></div>    
+            </div>
+            <div class="table-description">
+                    <table class="answer-table">
+                        <tr>
+                            <td id="label-1">Category</td>
+                            <td id="label-2">Value</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Country:</td>
+                            <td class="output-table, white" id="country-output">Switzerland</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, stripe">Population:</td>
+                            <td class="output-table, stripe" id="population-output">396,027</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Density:</td>
+                            <td class="output-table, white" id="density-output">12,000/sq mi</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, stripe">Area:</td>
+                            <td class="output-table, stripe" id="area-output">33.93 sq mi</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Currency:</td>
+                            <td class="output-table, white" id="currency-output">Swiss franc (CHF)</td>
+                        </tr>
+                    </table>
+            </div>
+            <div class="answer-pic4"></div>
+            <div class="hatch" id="answer-verdict4"></div>
+            <div class="next4"><button>Next!</button></div>
+        </div>
+
+            <!-- Answer 5 -->
+
+        <div class="answer-box5">
+            <div class="goToLocation" id="goToLocation5"><span id="transition-text5">Traveling To...</span></div>
+            <div class="map-container">
+                <div id="map5"></div>    
+            </div>
+            <div class="table-description">
+                    <table class="answer-table">
+                        <tr>
+                            <td id="label-1">Category</td>
+                            <td id="label-2">Value</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Country:</td>
+                            <td class="output-table, white" id="country-output">Brazil</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, stripe">Population:</td>
+                            <td class="output-table, stripe" id="population-output">12,280,702</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Density:</td>
+                            <td class="output-table, white" id="density-output">7,006/sq mi</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, stripe">Area:</td>
+                            <td class="output-table, stripe" id="area-output">486.5 sq mi</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Currency:</td>
+                            <td class="output-table, white" id="currency-output">Brazilian Real (BRL)</td>
+                        </tr>
+                    </table>
+            </div>
+            <div class="answer-pic5"></div>
+            <div class="hatch" id="answer-verdict5"></div>
+            <div class="next5"><button>Next!</button></div>
+        </div>
+
+            <!-- THE NAV TOPBAR -->
+        
+            <div class="nav-container">
+                <nav>
+                    <div class="question-container">
+                        <div id="circle-1-pulse" class="question-pulse"></div>    
+                        <img id="circle-1" src="images/number.png" alt="Number 1">
+                    </div>
+                    <div class="question-container">
+                        <div id="circle-2-pulse" class="pre-question-pulse"></div>    
+                        <img id="circle-2" src="images/number (1).png" alt="Number 2">
+                    </div>
+                    <div class="question-container">
+                        <div id="circle-3-pulse" class="pre-question-pulse"></div>    
+                        <img id="circle-3" src="images/number (2).png" alt="Number 3">
+                    </div>
+                    <div class="question-container">
+                        <div id="circle-4-pulse" class="pre-question-pulse"></div>    
+                        <img id="circle-4" src="images/number (3).png" alt="Number 4">
+                    </div>
+                    <div class="question-container">
+                        <div id="circle-5-pulse" class="pre-question-pulse"></div>    
+                        <img id="circle-5" src="images/number (4).png" alt="Number 5">
+                    </div>
+                </nav>
+            </div>
+        
+            <!-- QUESTION 1 -->
+
+        <div class="container">
+            <img class="quiz-question image-spacing" src="images/question1-pic.jpg" alt="Question Image">
+
+            <hr>
+
+            <h2 class="question-prompt">This location is:</h2> 
+                         
+            <table class="question-spacing">
+                <tr>   
+                    <td id="classA" class="correct1"><button id="choiceA">A. Brussels, Belgium </button></td>
+                    <td id="classB" class="incorrect1"><button id="choiceB">B. Vienna, Austria </button></td>
+                </tr>
+                <tr>   
+                    <td id="classC" class="incorrect1"><button id="choiceC">C. Luxembourg City, Luxembourg</button></td>
+                    <td id="classD" class="incorrect1"><button id="choiceD">D. Copenhagen, Denmark</button></td>
+                </tr>
+            </table> 
+
+            <!-- QUESTION 2 -->
+
+            <img class="quiz-question" id="img-2" src="images/singapore-question.jpg" alt="Question Image">
+
+            <hr>
+
+            <h2>How about this Location?</h2> 
+                         
+            <table class="question-spacing">
+                <tr>   
+                    <td id="classA" class="incorrect2"><button id="choiceA">A. London, UK</button></td>
+                    <td id="classB" class="incorrect2"><button id="choiceB">B. Macau, China</button></td>
+                </tr>
+                <tr>   
+                    <td id="classC" class="correct2"><button id="choiceC">C. Republic of Singapore</button></td>
+                    <td id="classD" class="incorrect2"><button id="choiceD">D. Bluewaters Island, UAE</button></td>
+                </tr>
+            </table> 
+    
+            <!-- QUESTION 3 -->
+
+            <img class="quiz-question" id="img-3" src="images/dubai-question.jpg" alt="Question Image">
+
+            <hr>
+
+            <h2>Do you know this location?</h2> 
+                         
+            <table class="question-spacing">
+                <tr>   
+                    <td id="classA" class="incorrect3"><button id="choiceA">A. Doha, Qatar</button></td>
+                    <td id="classB" class="incorrect3"><button id="choiceB">B. Jeddah, Saudi Arabia</button></td>
+                </tr>
+                <tr>   
+                    <td id="classC" class="incorrect3"><button id="choiceC">C. Manama, Bahrain</button></td>
+                    <td id="classD" class="correct3"><button id="choiceD">D. Dubai, UAE</button></td>
+                </tr>
+            </table> 
+
+            <!-- QUESTION 4 -->
+
+            <img class="quiz-question" id="img-4" src="images/zurich-question.jpg" alt="Question Image">
+
+            <hr>
+
+            <h2>How about this Location?</h2> 
+                         
+            <table class="question-spacing">
+                <tr>   
+                    <td id="classA" class="incorrect4"><button id="choiceA">A. Salzburg, Austria</button></td>
+                    <td id="classB" class="correct4"><button id="choiceB">B. Zürich, Switzerland</button></td>
+                </tr>
+                <tr>   
+                    <td id="classC" class="incorrect4"><button id="choiceC">C. Amsterdam, Netherlands</button></td>
+                    <td id="classD" class="incorrect4"><button id="choiceD">D. Prague, Czech Republic</button></td>
+                </tr>
+            </table> 
+
+            <!-- QUESTION 5 -->
+
+            <img class="quiz-question" id="img-5" src="images/rio-question.jpg" alt="Question Image">
+
+            <hr>
+
+            <h2>FINAL QUESTION! Do you know this location?</h2> 
+                         
+            <table>
+                <tr>   
+                    <td id="classA" class="correct5"><button id="choiceA">A. Rio de Janeiro, Brazil</button></td>
+                    <td id="classB" class="incorrect5"><button id="choiceB">B. Bogota, Colombia</button></td>
+                </tr>
+                <tr>   
+                    <td id="classC" class="incorrect5"><button id="choiceC">C. Lima, Peru</button></td>
+                    <td id="classD" class="incorrect5"><button id="choiceD">D. Santiago, Chile</button></td>
+                </tr>
+            </table> 
+        </div>
+        <footer></footer>
+            <!-- DONT TOUCH BELOW  -->
+        <script src="javascript/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js"></script>
+        <script src="javascript/jquery.animate-colors-min.js" type="text/javascript"></script>
+        <script src="javascript/index.js" type="text/javascript"></script>
+    </body>
+</html>
