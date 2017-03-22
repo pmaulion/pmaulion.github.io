@@ -10,6 +10,7 @@ body {
     background-image: url(../images/Destination.jpg);
     position: relative;
     background-repeat: no-repeat;
+    background-position: center;
     border-radius: 20px;
     bottom: 800px;
     height: 339px;
